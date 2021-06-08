@@ -1,0 +1,70 @@
+
+AARTIINDSupport at 210 VWAP interval:day
+APOLLOTYRESupport at 210 VWAP interval:60minute
+ASIANPAINTSupport at 21 period EMA interval:60minute
+AXISBANKSupport at 21 period EMA interval:60minute
+BELSupport at 210 VWAP interval:day
+BHELSupport at 210 VWAP interval:60minute
+BHARTIARTLSupport at 21 period EMA interval:day
+BHARTIARTLSupport at 210 VWAP interval:day
+BRITANNIASupport at 21 period EMA interval:day
+BRITANNIASupport at 210 period VWAP interval:day
+CADILAHCSupport at 210 VWAP interval:60minute
+CADILAHCSupport at 21 period EMA interval:day
+CADILAHCSupport at 210 VWAP interval:day
+CHOLAFINSupport at 21 period EMA interval:60minute
+CONCORSupport at 21 period EMA interval:60minute
+CUMMINSINDSupport at 21 period EMA interval:day
+CUMMINSINDSupport at 210 VWAP interval:day
+DIVISLABSupport at 21 period EMA interval:60minute
+DRREDDYSupport at 21 period EMA interval:day
+DRREDDYSupport at 210 VWAP interval:day
+EICHERMOTSupport at 210 VWAP interval:60minute
+GLENMARKSupport at 21 period EMA interval:day
+GLENMARKSupport at 210 VWAP interval:day
+GMRINFRASupport at 210 VWAP interval:60minute
+GMRINFRASupport at 210 VWAP interval:day
+GODREJCPSupport at 21 period EMA interval:60minute
+GODREJCPSupport at 210 VWAP interval:60minute
+GRASIMSupport at 210 VWAP interval:60minute
+HINDALCOSupport at 210 period VWAP interval:60minute
+HINDUNILVRSupport at 21 period EMA interval:60minute
+HINDUNILVRSupport at 21 period EMA interval:day
+HINDUNILVRSupport at 210 VWAP interval:day
+ICICIGISupport at 21 period EMA interval:day
+JINDALSTELSupport at 210 VWAP interval:60minute
+JSWSTEELSupport at 21 period EMA interval:day
+L&TFHSupport at 210 VWAP interval:60minute
+LTSupport at 21 period EMA interval:60minute
+LICHSGFINSupport at 21 period EMA interval:60minute
+MGLSupport at 21 period EMA interval:60minute
+MGLSupport at 210 VWAP interval:60minute
+M&MSupport at 21 period EMA interval:day
+M&MSupport at 210 VWAP interval:day
+MUTHOOTFINSupport at 21 period EMA interval:60minute
+PAGEINDSupport at 21 period EMA interval:60minute
+PAGEINDSupport at 210 VWAP interval:60minute
+RBLBANKSupport at 210 VWAP interval:60minute
+SBILIFESupport at 21 period EMA interval:day
+SHREECEMSupport at 210 VWAP interval:60minute
+SUNPHARMASupport at 21 period EMA interval:day
+SUNTVSupport at 21 period EMA interval:day
+SUNTVSupport at 210 VWAP interval:day
+TATASTEELSupport at 210 period VWAP interval:60minute
+TATASTEELSupport at 21 period EMA interval:day
+ULTRACEMCOSupport at 210 VWAP interval:60minute
+VEDLSupport at 21 period EMA interval:day
+IDEATouched at 79 - 21 period RSI, interval:60minute
+IDEASupport at 21 period EMA interval:day
+AUBANKSupport at 21 period EMA interval:60minute
+DEEPAKNTRSupport at 21 period EMA interval:day
+DEEPAKNTRSupport at 210 VWAP interval:day
+NAVINFLUORSupport at 21 period EMA interval:day
+NAVINFLUORSupport at 210 VWAP interval:day
+PFIZERSupport at 21 period EMA interval:day
+PFIZERSupport at 210 VWAP interval:day
+APLLTDSupport at 21 period EMA interval:day
+APLLTDSupport at 21 period EMA interval:day
+APLLTDSupport at 210 VWAP interval:day
+APLLTDSupport at 210 period VWAP interval:day
+GRANULESSupport at 21 period EMA interval:day

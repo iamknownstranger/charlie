@@ -95,42 +95,59 @@ for instrument_token, symbol in fno_stocks.items():
         candle_data["rsi21"] = talib.RSI(candle_data.close, timeperiod=21)
         candle_data["rsi34"] = talib.RSI(candle_data.close, timeperiod=34)
         candle_data["rsi210"] = talib.RSI(candle_data.close, timeperiod=210)
+        
         penultimate_candle = candle_data.iloc[-2]
         last_candle = candle_data.iloc[-1]
 
+        if penultimate_candle.rsi34 > 66:
+            if last_candle.close <= 66:
+                screener.write("\n" + symbol + " Touched at 66 - 34 period RSI, interval:" + str(interval))
+                print(symbol, "Touched at 34 period RSI, interval:", interval)
+
+        if penultimate_candle.rsi21 > 66:
+            if last_candle.close <= 66:
+                screener.write("\n" + symbol + " Touched at 79 - 21 period RSI, interval:" + str(interval))
+                print(symbol, "Tookoff at 21 period RSI, interval:", interval)
+
+        if penultimate_candle.rsi21 > 79:
+            if last_candle.close <= 79:
+                screener.write("\n" + symbol + " Tookoff at 79 - 21 period RSI, interval:" + str(interval))
+                print(symbol, "Tookoff at 21 period RSI, interval:", interval)
+        
+
         if penultimate_candle.rsi34 < 34:
             if last_candle.close >= 34:
-                screener.write(symbol + "Tookoff at 34 - 34 period RSI, interval:" + str(interval))
+                screener.write("\n" + symbol + " Tookoff at 34 - 34 period RSI, interval:" + str(interval))
                 print(symbol, "Tookoff at 34 period RSI, interval:", interval)
 
         if penultimate_candle.rsi21 < 34:
             if last_candle.close >= 34:
-                screener.write(symbol + "Tookoff at 34 - 21 period RSI, interval:" + str(interval))
+                screener.write("\n" + symbol + " Tookoff at 34 - 21 period RSI, interval:" + str(interval))
                 print(symbol, "Tookoff at 34 period RSI, interval:", interval)
         
         if penultimate_candle.rsi21 < 21:
             if last_candle.close >= 21:
-                screener.write(symbol + "Tookoff at 21 - 21 period RSI, interval:" + str(interval))
+                screener.write("\n" + symbol + " Tookoff at 21 - 21 period RSI, interval:" + str(interval))
                 print(symbol, "Tookoff at 21 period RSI, interval:", interval)
     
 
         if last_candle.low <= penultimate_candle.ema21:
             if last_candle.close >= penultimate_candle.ema21:
-                screener.write(symbol + "Support at 21 period EMA interval:" + str(interval))
+                screener.write("\n" + symbol + " Support at 21 period EMA interval:" + str(interval))
                 print(symbol, "Support at 21 period EMA interval:", interval)
 
         if last_candle.low <= penultimate_candle.ema210:
             if last_candle.close >= penultimate_candle.ema210:
-                screener.write(symbol + "Support at 21 period EMA interval:" + str(interval))
+                screener.write("\n" + symbol + " Support at 21 period EMA interval:" + str(interval))
                 print(symbol, "Support at 210 period EMA interval:", interval)
 
         if last_candle.low <= penultimate_candle.vwap21:
             if last_candle.close >= penultimate_candle.vwap21:
-                screener.write(symbol +  "Support at 210 VWAP interval:" + str(interval))
+                screener.write("\n" + symbol +  " Support at 210 VWAP interval:" + str(interval))
                 print(symbol, "Support at 21 period VWAP interval:", interval)
 
         if last_candle.low <= penultimate_candle.vwap210:
             if last_candle.close >= penultimate_candle.vwap210:
-                screener.write(symbol +  "Support at 210 period VWAP interval:" + str(interval))
+                screener.write("\n" + symbol +  " Support at 210 period VWAP interval:" + str(interval))
                 print(symbol, "Support at 210 period VWAP interval:", interval)
 

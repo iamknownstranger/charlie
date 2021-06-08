@@ -56,45 +56,41 @@ orderbook = open("orderbook.txt", "w")
 # tradebook.write(watchlist_instruments.name.tolist())
 
 
-# # Buy the call option
-# call_buy_price = kite.ltp(call_instrument_token)[
-#     str(call_instrument_token)]['last_price']
+# Buy the call option
+call_buy_price = kite.ltp(call_instrument_token)[
+    str(call_instrument_token)]['last_price']
 
-# # Buy the put option
-# put_buy_price = kite.ltp(put_instrument_token)[
-#     str(put_instrument_token)]['last_price']
+# Buy the put option
+put_buy_price = kite.ltp(put_instrument_token)[
+    str(put_instrument_token)]['last_price']
 
-# orderbook.write("Bought " + call_tradingsymbol + "at" + str(call_buy_price))
-# orderbook.write("Bought " + put_tradingsymbol + "at" + str(put_buy_price))
+orderbook.write("Bought " + call_tradingsymbol + "at" + str(call_buy_price))
+orderbook.write("Bought " + put_tradingsymbol + "at" + str(put_buy_price))
 
-# total_premium = call_buy_price + put_buy_price
+total_premium = call_buy_price + put_buy_price
 
-
-watchlist = [206105, call_instrument_token, put_instrument_token]
-# print(pd.DataFrame(kite.historical_data(206105, previous_trading_day +" 15:00:00", previous_trading_day + " 15:21:00", "minute")))
-
+tickers = {call_instrument_token:call_tradingsymbol, put_instrument_token:put_tradingsymbol}
+watchlist = [call_instrument_token, put_instrument_token]
 
 ticks144 = {}
 volume144 = {}
 tick_data = {}
 candle_writers = {}
 tick_writers = {}
-price_touchdown = {}
-open_positions = {}
 
 
 for token in watchlist:
     ticks144[token] = []
     volume144[token] = 0
-    tick_data[token] = pd.DataFrame(columns=["datetime, open, high, low, close, ohlc"])
+    tick_data[token] = pd.DataFrame(kite.historical_data(token, previous_trading_day +" 15:00:00", previous_trading_day + " 15:21:00", "minute"))
     candle_writers[token] = csv.writer(open(str(token) + ".csv", "w"))
     tick_writers[token] = csv.writer(open(str(token) + "_ticks.csv", "w"))
-    price_touchdown[token] = False
-    open_positions[token] = False
-    
 
 instrument_token = ''
 ltp = ''
+rsi_touchdown = False
+rsi_takeoff = False
+open_positions = True
 
 kws = kite.ticker()
 
@@ -103,23 +99,26 @@ def on_ticks(ws, ticks):
 
     # Callback to receive ticks.
     for tick in ticks:
-       
         instrument_token = tick['instrument_token']
         ltp = tick['last_price']
         ohlc = tick['ohlc']
         last_quantity = tick['last_quantity']
-
-        if ltp < ohlc['close']:
-            price_touchdown[instrument_token] = True
         
-        if ltp > ohlc['close'] and price_touchdown[instrument_token] and not open_positions[instrument_token]:
+        if ltp > total_premium and open_positions:
+            # Sell the call option
+            call_sell_price = kite.ltp(call_instrument_token)[
+                str(call_instrument_token)['last_price']]
 
-            orderbook.write("Bought " + str(instrument_token) + " at " + ltp + " price touchdown")
-            open_positions[instrument_token] = True
-        
-        if ltp > ohlc['open'] and open_positions[instrument_token]:
-            orderbook.write("Sold " + str(instrument_token) + " at " + ltp + " target open reached")
-            open_positions[instrument_token] = True
+            # Sell the put option
+            put_sell_price = kite.ltp(put_instrument_token)[
+                str(put_instrument_token)['last_price']]
+
+            orderbook.write("Sold " + call_tradingsymbol +
+                            "at" + str(call_sell_price))
+            orderbook.write("Sold " + put_tradingsymbol +
+                            "at" + str(put_sell_price))
+            
+            open_positions = False
             
 
         if(ltp > ohlc['high']):
@@ -136,6 +135,7 @@ def on_ticks(ws, ticks):
         volume144[instrument_token] += last_quantity
 
         if(len(ticks144[instrument_token]) == 144):
+
             candle_open = ticks144[instrument_token][0]
             candle_high = max(ticks144[instrument_token])
             candle_low = min(ticks144[instrument_token])
@@ -145,13 +145,13 @@ def on_ticks(ws, ticks):
             
             tick_data_length = len(tick_data[instrument_token])
             tick_data[instrument_token].loc[tick_data_length] = candle_data
-
-
-            # rsi = talib.rsi_list(tick_data[instrument_token]['close'], timeperiod=21)
-            # ema = talib.ema_list(tick_data[instrument_token]['close'], timeperiod=21)
-            # wma = talib.wma_list(tick_data[instrument_token]['close'], timeperiod=21)
-            # candle_data.append([rsi, ema, wma])
             candle_writers[instrument_token].writerow(candle_data)
+
+            tick_data['rsi13'] = talib.rsi_list(tick_data[instrument_token]['close'], timeperiod=13)
+            tick_data['rsi21'] = talib.rsi_list(tick_data[instrument_token]['close'], timeperiod=21)
+            tick_data['rsi34'] = talib.rsi_list(tick_data[instrument_token]['close'], timeperiod=34)
+            tick_data['ema21'] = talib.ema_list(tick_data[instrument_token]['close'], timeperiod=21)
+            tick_data['wma21'] = talib.wma_list(tick_data[instrument_token]['close'], timeperiod=21)
 
             if(ticks144[instrument_token][-1] > ohlc['high']):
                 tradebook.write(
@@ -160,12 +160,40 @@ def on_ticks(ws, ticks):
                 tradebook.write("\nClose below days low - Breakdown " +
                                 str(instrument_token) + get_timestamp())
             
-            # if(rsi <= 21):
-            #     rsi_touchdown = True
-            #     orderbook.write("\n"+str(instrument_token) + "RSI is near 21 " + ltp)
-            # if rsi_touchdown and rsi > 21:
-            #     rsi_takeoff = True
-            #     orderbook.write("\n"+str(instrument_token) + "RSI is crossed 21 " + ltp)
+            penultimate_candle = tick_data.iloc[-2]
+            last_candle = tick_data.iloc[-1]
+            symbol = tickers[instrument_token]
+
+            if penultimate_candle.rsi34 > 66:
+                if last_candle.close <= 66:
+                    tradebook.write("\n" + symbol + " Touched at 66 - 34 period RSI, ltp:", ltp)
+                    print(symbol, "Touched at 34 period RSI")
+
+            if penultimate_candle.rsi21 > 66:
+                if last_candle.close <= 66:
+                    tradebook.write("\n" + symbol + " Touched at 79 - 21 period RSI, ltp:", ltp)
+                    print(symbol, "Tookoff at 21 period RSI")
+
+            if penultimate_candle.rsi13 > 79:
+                if last_candle.close <= 79:
+                    tradebook.write("\n" + symbol + " Tookoff at 79 - 13 period RSI, ltp:", ltp)
+                    print(symbol, "Tookoff at 21 period RSI")
+            
+
+            if penultimate_candle.rsi34 < 34:
+                if last_candle.close >= 34:
+                    tradebook.write("\n" + symbol + " Tookoff at 34 - 34 period RSI, ltp:", ltp)
+                    print(symbol, "Tookoff at 34 period RSI")
+
+            if penultimate_candle.rsi21 < 34:
+                if last_candle.close >= 34:
+                    tradebook.write("\n" + symbol + " Tookoff at 34 - 21 period RSI, ltp:", ltp)
+                    print(symbol, "Tookoff at 34 period RSI")
+            
+            if penultimate_candle.rsi13 < 21:
+                if last_candle.close >= 21:
+                    tradebook.write("\n" + symbol + " Tookoff at 21 - 13 period RSI, ltp:", ltp)
+                    print(symbol, "Tookoff at 13 period RSI")
 
             ticks144[instrument_token] = []
             volume144[instrument_token] = 0
