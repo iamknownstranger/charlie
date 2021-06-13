@@ -96,5 +96,54 @@ def supertrend(Data, multiplier, lookback):
     return Data
 
 
+def ema(Data, alpha, lookback, what, where):
+    
+    # alpha is the smoothing factor
+    # window is the lookback period
+    # what is the column that needs to have its average calculated
+    # where is where to put the exponential moving average
+    
+    alpha = alpha / (lookback + 1.0)
+    beta  = 1 - alpha
+    
+    # First value is a simple SMA
+    Data = ma(Data, lookback, what, where)
+    
+    # Calculating first EMA
+    Data[lookback + 1, where] = (Data[lookback + 1, what] * alpha) + (Data[lookback, where] * beta)
+    # Calculating the rest of EMA
+    for i in range(lookback + 2, len(Data)):
+            try:
+                Data[i, where] = (Data[i, what] * alpha) + (Data[i - 1, where] * beta)
+        
+            except IndexError:
+                pass
+    return Datadef atr(Data, lookback, high, low, close, where):
+    
+    # Adding the required columns
+    Data = adder(Data, 2)
+    
+    # True Range Calculation
+    for i in range(len(Data)):
+        try:
+            
+          Data[i, where] = max(Data[i, high] - Data[i, low],
+                           abs(Data[i, high] - Data[i - 1, close]),
+                           abs(Data[i, low] - Data[i - 1, close]))
+            
+        except ValueError:
+            pass
+        
+    Data[0, where] = 0   
+    
+    # Average True Range Calculation
+    Data = ema(Data, 2, lookback, where, where + 1)
+    
+    # Cleaning
+    Data = deleter(Data, where, 1)
+    Data = jump(Data, lookback)
+    return Data
+
+
 historical_data = pd.DataFrame(kite.historical_data(260105, today - timedelta(days=34), today, "day"))
 print(supertrend(historical_data, 21, 3))
