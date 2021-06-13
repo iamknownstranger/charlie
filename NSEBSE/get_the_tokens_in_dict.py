@@ -21,7 +21,7 @@ watchlist = []
 
 
 
-with open("symbols.csv") as file:
+with open("/home/ubuntu/charlie/symbols.csv") as file:
     reader = csv.DictReader(file)
     for row in reader:
         # print(row['nse_token'])
@@ -35,16 +35,13 @@ with open("symbols.csv") as file:
             continue
         elif(ltp_nse > ltp_bse):
             print("LTP is higher in NSE is greater than that in BSE")
-
-
+        
         else:
             print("LTP is higher in BSE is greater than that in NSE")
+        watchlist.append((row['nse_token'], row['bse_token']))
         print("Difference: ", ltp_nse - ltp_bse, ltp_nse, ltp_bse)
 
-        watchlist.append((row['nse_token'], row['bse_token']))
-
-print("watchlist", watchlist)
-tradebook = open("tradebook.txt", "w")
+tradebook = open("nse)bse_pre_open.txt", "w")
 for nse_token, bse_token in watchlist:
     ltp_nse = kite.ltp(nse_token)[nse_token]['last_price']
     ltp_bse = kite.ltp(bse_token)[bse_token]['last_price']

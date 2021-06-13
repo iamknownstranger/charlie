@@ -36,7 +36,7 @@ nfo_instruments = kite.instruments("NFO")
 instruments = pd.DataFrame(nfo_instruments)
 
 
-expiry = 'BANKNIFTY21603'
+expiry = 'BANKNIFTY21610'
 strike_lower_bound = banknifty_spot - (banknifty_spot % 100) - 500
 strike_prices = [strike_price for strike_price in range(
     strike_lower_bound, strike_lower_bound+1100, 100)]
@@ -81,6 +81,7 @@ def on_ticks(ws, ticks):
 
     # Callback to receive ticks.
     for tick in ticks:
+        print(tick)
         instrument_token = tick['instrument_token']
         ltp = tick['last_price']
         ohlc = tick['ohlc']

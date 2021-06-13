@@ -1,70 +1,99 @@
 
-AARTIINDSupport at 210 VWAP interval:day
-APOLLOTYRESupport at 210 VWAP interval:60minute
-ASIANPAINTSupport at 21 period EMA interval:60minute
-AXISBANKSupport at 21 period EMA interval:60minute
-BELSupport at 210 VWAP interval:day
-BHELSupport at 210 VWAP interval:60minute
-BHARTIARTLSupport at 21 period EMA interval:day
-BHARTIARTLSupport at 210 VWAP interval:day
-BRITANNIASupport at 21 period EMA interval:day
-BRITANNIASupport at 210 period VWAP interval:day
-CADILAHCSupport at 210 VWAP interval:60minute
-CADILAHCSupport at 21 period EMA interval:day
-CADILAHCSupport at 210 VWAP interval:day
-CHOLAFINSupport at 21 period EMA interval:60minute
-CONCORSupport at 21 period EMA interval:60minute
-CUMMINSINDSupport at 21 period EMA interval:day
-CUMMINSINDSupport at 210 VWAP interval:day
-DIVISLABSupport at 21 period EMA interval:60minute
-DRREDDYSupport at 21 period EMA interval:day
-DRREDDYSupport at 210 VWAP interval:day
-EICHERMOTSupport at 210 VWAP interval:60minute
-GLENMARKSupport at 21 period EMA interval:day
-GLENMARKSupport at 210 VWAP interval:day
-GMRINFRASupport at 210 VWAP interval:60minute
-GMRINFRASupport at 210 VWAP interval:day
-GODREJCPSupport at 21 period EMA interval:60minute
-GODREJCPSupport at 210 VWAP interval:60minute
-GRASIMSupport at 210 VWAP interval:60minute
-HINDALCOSupport at 210 period VWAP interval:60minute
-HINDUNILVRSupport at 21 period EMA interval:60minute
-HINDUNILVRSupport at 21 period EMA interval:day
-HINDUNILVRSupport at 210 VWAP interval:day
-ICICIGISupport at 21 period EMA interval:day
-JINDALSTELSupport at 210 VWAP interval:60minute
-JSWSTEELSupport at 21 period EMA interval:day
-L&TFHSupport at 210 VWAP interval:60minute
-LTSupport at 21 period EMA interval:60minute
-LICHSGFINSupport at 21 period EMA interval:60minute
-MGLSupport at 21 period EMA interval:60minute
-MGLSupport at 210 VWAP interval:60minute
-M&MSupport at 21 period EMA interval:day
-M&MSupport at 210 VWAP interval:day
-MUTHOOTFINSupport at 21 period EMA interval:60minute
-PAGEINDSupport at 21 period EMA interval:60minute
-PAGEINDSupport at 210 VWAP interval:60minute
-RBLBANKSupport at 210 VWAP interval:60minute
-SBILIFESupport at 21 period EMA interval:day
-SHREECEMSupport at 210 VWAP interval:60minute
-SUNPHARMASupport at 21 period EMA interval:day
-SUNTVSupport at 21 period EMA interval:day
-SUNTVSupport at 210 VWAP interval:day
-TATASTEELSupport at 210 period VWAP interval:60minute
-TATASTEELSupport at 21 period EMA interval:day
-ULTRACEMCOSupport at 210 VWAP interval:60minute
-VEDLSupport at 21 period EMA interval:day
-IDEATouched at 79 - 21 period RSI, interval:60minute
-IDEASupport at 21 period EMA interval:day
-AUBANKSupport at 21 period EMA interval:60minute
-DEEPAKNTRSupport at 21 period EMA interval:day
-DEEPAKNTRSupport at 210 VWAP interval:day
-NAVINFLUORSupport at 21 period EMA interval:day
-NAVINFLUORSupport at 210 VWAP interval:day
-PFIZERSupport at 21 period EMA interval:day
-PFIZERSupport at 210 VWAP interval:day
-APLLTDSupport at 21 period EMA interval:day
-APLLTDSupport at 21 period EMA interval:day
-APLLTDSupport at 210 VWAP interval:day
-APLLTDSupport at 210 period VWAP interval:day
-GRANULESSupport at 21 period EMA interval:day
+AARTIIND Support at 21 period EMA interval:minute
+AARTIIND Support at 210 VWAP interval:minute
+AARTIIND Support at 210 period VWAP interval:minute
+AARTIIND Support at 21 period EMA interval:5minute
+AARTIIND Support at 21 period EMA interval:10minute
+AARTIIND Support at 210 VWAP interval:10minute
+AARTIIND Support at 210 VWAP interval:day
+ACC Support at 21 period EMA interval:minute
+ACC Support at 21 period EMA interval:minute
+ACC Support at 210 VWAP interval:minute
+ACC Support at 210 period VWAP interval:minute
+ACC Support at 21 period EMA interval:3minute
+ACC Support at 210 VWAP interval:3minute
+ACC Support at 21 period EMA interval:5minute
+ACC Support at 210 VWAP interval:5minute
+ACC Support at 21 period EMA interval:10minute
+ACC Support at 210 VWAP interval:10minute
+ACC Support at 21 period EMA interval:15minute
+ACC Support at 21 period EMA interval:30minute
+ADANIENT Support at 21 period EMA interval:minute
+ADANIENT Support at 21 period EMA interval:15minute
+ADANIENT Support at 21 period EMA interval:30minute
+ADANIENT Support at 210 VWAP interval:30minute
+ADANIPORTS Support at 21 period EMA interval:minute
+ADANIPORTS Support at 210 VWAP interval:minute
+ADANIPORTS Support at 210 VWAP interval:3minute
+ADANIPORTS Support at 21 period EMA interval:30minute
+AMARAJABAT Support at 210 period VWAP interval:minute
+AMARAJABAT Support at 21 period EMA interval:3minute
+AMARAJABAT Support at 21 period EMA interval:5minute
+AMARAJABAT Support at 210 VWAP interval:10minute
+AMBUJACEM Support at 210 period VWAP interval:3minute
+AMBUJACEM Support at 21 period EMA interval:10minute
+AMBUJACEM Support at 210 VWAP interval:30minute
+APOLLOTYRE Support at 21 period EMA interval:30minute
+APOLLOTYRE Support at 210 VWAP interval:60minute
+ASIANPAINT Support at 21 period EMA interval:minute
+ASIANPAINT Support at 210 period VWAP interval:minute
+ASIANPAINT Support at 21 period EMA interval:3minute
+ASIANPAINT Support at 210 period VWAP interval:3minute
+ASIANPAINT Support at 21 period EMA interval:5minute
+ASIANPAINT Support at 21 period EMA interval:10minute
+ASIANPAINT Support at 21 period EMA interval:10minute
+ASIANPAINT Support at 210 VWAP interval:10minute
+ASIANPAINT Support at 210 period VWAP interval:10minute
+ASIANPAINT Support at 21 period EMA interval:15minute
+ASIANPAINT Support at 21 period EMA interval:30minute
+ASIANPAINT Support at 210 VWAP interval:30minute
+ASIANPAINT Support at 21 period EMA interval:60minute
+AXISBANK Support at 21 period EMA interval:minute
+AXISBANK Support at 210 period VWAP interval:minute
+AXISBANK Support at 21 period EMA interval:10minute
+AXISBANK Support at 21 period EMA interval:10minute
+AXISBANK Support at 210 period VWAP interval:10minute
+AXISBANK Support at 21 period EMA interval:15minute
+BAJAJ-AUTO Support at 21 period EMA interval:minute
+BAJAJ-AUTO Support at 210 period VWAP interval:minute
+BAJAJ-AUTO Support at 21 period EMA interval:3minute
+BAJAJ-AUTO Support at 210 VWAP interval:3minute
+BAJAJ-AUTO Support at 21 period EMA interval:5minute
+BAJAJ-AUTO Support at 210 VWAP interval:5minute
+BAJAJ-AUTO Support at 21 period EMA interval:10minute
+BAJAJ-AUTO Support at 210 VWAP interval:10minute
+BALKRISIND Support at 21 period EMA interval:3minute
+BANDHANBNK Support at 210 VWAP interval:15minute
+BANKBARODA Support at 210 VWAP interval:minute
+BANKBARODA Support at 210 period VWAP interval:10minute
+BANKBARODA Support at 210 VWAP interval:15minute
+BERGEPAINT Support at 21 period EMA interval:minute
+BERGEPAINT Support at 21 period EMA interval:minute
+BERGEPAINT Support at 210 VWAP interval:minute
+BERGEPAINT Support at 210 period VWAP interval:minute
+BERGEPAINT Support at 21 period EMA interval:3minute
+BERGEPAINT Support at 21 period EMA interval:3minute
+BERGEPAINT Support at 210 VWAP interval:3minute
+BERGEPAINT Support at 21 period EMA interval:5minute
+BERGEPAINT Support at 210 VWAP interval:5minute
+BERGEPAINT Support at 21 period EMA interval:10minute
+BERGEPAINT Support at 210 VWAP interval:10minute
+BERGEPAINT Support at 21 period EMA interval:15minute
+BERGEPAINT Support at 21 period EMA interval:30minute
+BEL Support at 210 VWAP interval:day
+BHARATFORG Support at 210 VWAP interval:3minute
+BHARATFORG Support at 21 period EMA interval:15minute
+BHARATFORG Support at 210 VWAP interval:15minute
+BHEL Tookoff at 34 - 21 period RSI, interval:minute
+BHEL Support at 21 period EMA interval:5minute
+BHEL Support at 210 VWAP interval:60minute
+BHARTIARTL Support at 21 period EMA interval:day
+BHARTIARTL Support at 210 VWAP interval:day
+BOSCHLTD Support at 21 period EMA interval:15minute
+BOSCHLTD Support at 210 VWAP interval:15minute
+BRITANNIA Support at 21 period EMA interval:day
+BRITANNIA Support at 210 period VWAP interval:day
+CADILAHC Support at 210 VWAP interval:60minute
+CADILAHC Support at 21 period EMA interval:day
+CADILAHC Support at 210 VWAP interval:day
+CANBK Support at 210 VWAP interval:15minute
