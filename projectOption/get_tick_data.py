@@ -1,6 +1,3 @@
-
-
-
 import talib
 from pandas.tseries.offsets import BDay
 from pprint import pprint
@@ -14,13 +11,13 @@ import csv
 print('Om Namahshivaya:')
 
 
-class TickData:
+# class TickData:
 
-    def __init__(self, watchlist)
-        self.candles = {}
-        self.ticks = {}
-        for instrument_token in watchlist:
-            candles[instrument_token] = pd.DataFrame()
+#     def __init__(self, watchlist)
+#         self.candles = {}
+#         self.ticks = {}
+#         for instrument_token in watchlist:
+#             candles[instrument_token] = pd.DataFrame()
 
 
 
@@ -61,59 +58,37 @@ kite = Zerodha()
 # Name chosen to keep it compatible with kiteconnect.
 kite.set_access_token()
 
-tickers = {13613826: 'BANKNIFTY21JULFUT', 12417538: 'BANKNIFTY21JUNFUT'}
-
-
 banknifty_quote = kite.quote(260105)['260105']
-banknifty_future_ohlc = kite.ohlc(12417538)['12417538']
 banknifty_spot = round(banknifty_quote['last_price'])
 banknifty_close = round(banknifty_quote['ohlc']['close'])
-banknifty_future_high = round(banknifty_future_ohlc['ohlc']['high'])
-banknifty_future_low = round(banknifty_future_ohlc['ohlc']['low'])
+banknifty_high = round(banknifty_quote['ohlc']['high'])
+banknifty_low = round(banknifty_quote['ohlc']['low'])
 
-
-if banknifty_spot > banknifty_close:
-    call_strike = banknifty_close - (banknifty_close % 100)
-    put_strike = banknifty_spot - (banknifty_spot % 100)
-    
-else:
-    call_strike = banknifty_spot - (banknifty_spot % 100)
-    put_strike = banknifty_close - (banknifty_close % 100)
-
-
-
-
-expiry = "BANKNIFTY21610"
-call_tradingsymbol = expiry + str(call_strike) + "CE"
-put_tradingsymbol = expiry + str(put_strike) + "PE"
-low_call_tradingsymbol = expiry + str(banknifty_future_low - (banknifty_future_low % 100)) + "CE"
-high_put_tradingsymbol = expiry + str(banknifty_future_high - (banknifty_future_high % 100)) + "PE"
-
-# option_tradingsymbols = [call_tradingsymbol, call_tradingsymbol, low_call_tradingsymbol, high_put_tradingsymbol]
-
-
-
+quotes = [banknifty_spot, banknifty_close, banknifty_high, banknifty_low]
 nfo_instruments = pd.DataFrame(kite.instruments("NFO"))
 
-# watchlist_instruments = nfo_instruments.loc[(nfo_instruments.name == 'BANKNIFTY') & (nfo_instruments.instrument_type == 'FUT'),]
-# print(banknifty_future_instruments)
+banknifty_instruments = nfo_instruments.loc[(nfo_instruments.name == 'BANKNIFTY')]
+# print(banknifty_instruments)
+# watchlist_instruments = banknifty_instruments.loc[banknifty_instruments.strike == 35000]
+# print(watchlist_instruments)
 
-call_instrument_token = nfo_instruments.loc[(nfo_instruments.tradingsymbol == call_tradingsymbol)].instrument_token.values[0]
-put_instrument_token = nfo_instruments.loc[(nfo_instruments.tradingsymbol == put_tradingsymbol)].instrument_token.values[0]
+watchlist = []
+tickertape = {}
+strikes = []
 
-low_call_instrument_token = nfo_instruments.loc[(
-    nfo_instruments.tradingsymbol == low_call_tradingsymbol)].instrument_token.values[0]
-high_put_instrument_token = nfo_instruments.loc[(
-    nfo_instruments.tradingsymbol == high_put_tradingsymbol)].instrument_token.values[0]
+for quote in quotes:
+    strike = quote - ( quote % 100 )
+    if strike not in strikes:
+        strikes.append(strikes)
+        monthly_options = banknifty_instruments.loc[banknifty_instruments.strike == strike, ['instrument_token', 'tradingsymbol']].head(2)
+        call_instrument_token, call_tradingsymbol = monthly_options.values[0]
+        put_instrument_token, put_tradingsymbol = monthly_options.values[1]
+        tickertape[call_instrument_token] = call_tradingsymbol
+        tickertape[put_instrument_token] = put_tradingsymbol
+        watchlist.append(call_instrument_token) 
+        watchlist.append(call_instrument_token)
 
-tickers[int(call_instrument_token)] = call_tradingsymbol
-tickers[int(put_instrument_token)] = put_tradingsymbol
-tickers[int(low_call_instrument_token)] = low_call_tradingsymbol
-tickers[int(high_put_instrument_token)] = high_put_tradingsymbol
-
-
-watchlist = list(tickers.keys())
-
+print(tickertape)
 
 ticks210 = {}
 volume = {}
@@ -125,8 +100,8 @@ for instrument_token in watchlist:
     ticks210[instrument_token] = []
     volume[instrument_token] = 0
     candles[instrument_token] = pd.DataFrame(kite.historical_data(instrument_token, previous_trading_day +" 15:00:00", previous_trading_day + " 15:21:00", "minute"))
-    candle_writers[instrument_token] = csv.writer(open(tickers[instrument_token] + ".csv", "w"))
-    tick_writers[instrument_token] = csv.writer(open(tickers[instrument_token] + "_ticks.csv", "w"))
+    candle_writers[instrument_token] = csv.writer(open(tickertape[instrument_token] + ".csv", "w"))
+    tick_writers[instrument_token] = csv.writer(open(tickertape[instrument_token] + "_ticks.csv", "w"))
 
 
 tradebook = open('tradebook.txt', "w")
@@ -136,18 +111,14 @@ instrument_token = ''
 ltp = ''
 open_positions = True
 
-# watchlist = [260105, 12783874, 13613826, 12417538, 12050178, 12056066, 12048130, 12062466]
-# watchlist = [260105, 12783874, 13613826, 12417538, call_instrument_token, put_instrument_token, low_call_instrument_token, high_put_instrument_token]
-# print(kite.ohlc(260105))
-
 kws = kite.ticker()
-print(watchlist)
+
 
 def on_ticks(ws, ticks):
     # Callback to receive ticks.
     for tick in ticks: 
 
-        print(tick)
+  
         instrument_token = tick['instrument_token']
         ltp = tick['last_price']
         ohlc = tick['ohlc']
