@@ -140,10 +140,12 @@ def on_ticks(ws, ticks):
 
         if(len(ticks210[instrument_token]) == 210):
 
-            candle_open = ticks210[instrument_token][0]
+            last_candle = candles[instrument_token].iloc[-1]
+            candle_open = ( last_candle.open + last_candle.close ) / 2
             candle_high = max(ticks210[instrument_token])
             candle_low = min(ticks210[instrument_token])
             candle_close = ticks210[instrument_token][-1]
+            candle_close = (candle_open + candle_high + candle_low + candle_close) / 4
             candle_volume = volume[instrument_token]
             candle_data = [get_timestamp(), candle_open, candle_high, candle_low, candle_close, candle_volume]
             
@@ -216,7 +218,7 @@ def on_close(ws, code, reason):
     # On connection close stop the event loop.
     # Reconnection will not happen after executing `ws.stop()`
     # for instrument_token in watchlist:
-    #     candles[instrument_token].to_csv(tickers[instrument_token]+"_df.csv")
+    #     candles[instrument_token].to_csv(tickertape[instrument_token]+"_df.csv")
     ws.stop()
 
 
