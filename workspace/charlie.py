@@ -5,6 +5,7 @@ import pandas as pd
 import pytz
 from datetime import datetime
 import csv
+import numpy as np
 
 
 print('Om Namahshivaya:')
