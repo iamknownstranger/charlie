@@ -43,12 +43,12 @@ for row in stock_instruments.iterrows():
   
 # print(stocks, watchlist)
 
-print("21 Day High Breakout")
+print("210 Day Range - High Breakout")
 for instrument_token in watchlist:
     try:
         historical_data = pd.DataFrame(kite.historical_data(
-            instrument_token, today - timedelta(days=34), today, "day"))
-        historical_data = historical_data.tail(-1).tail(21)
+            instrument_token, today - timedelta(days=365), today, "day"))
+        historical_data = historical_data.tail(-1).tail(34)
         
         todays_ohlc = kite.ohlc(instrument_token)[
             str(instrument_token)]

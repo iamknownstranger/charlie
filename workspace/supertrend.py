@@ -1,4 +1,4 @@
-import talib
+from talib import RSI, EMA, WMA
 import numpy as np
 from pprint import pprint
 from jugaad_trader import Zerodha
@@ -7,6 +7,7 @@ import pytz
 from datetime import datetime, timedelta
 import csv
 from pandas.tseries.offsets import BDay
+
 print("Om Namahshivaya:")
 
 
@@ -20,8 +21,17 @@ kite = Zerodha()
 # Name chosen to keep it compatible with kiteconnect.
 kite.set_access_token()
 
+# historical_data = pd.DataFrame(kite.historical_data(
+#     260105, today - timedelta(days=34), today, "day"))
 
-print('Om Namahshivaya:')
+# df = SuperTrend(historical_data, period=21, multiplier=3,
+#                 ohlc=['open', 'high', 'low', 'close'])
+# df = SuperTrend(historical_data, period=13, multiplier=2,
+#                 ohlc=['open', 'high', 'low', 'close'])
+# df = SuperTrend(historical_data, period=8, multiplier=1,
+#                 ohlc=['open', 'high', 'low', 'close'])
+# print(df)
+
 
 
 # Source for tech indicator : https://github.com/arkochhar/Technical-Indicators/blob/master/indicator/indicators.py
@@ -214,6 +224,7 @@ nfo_instruments = pd.DataFrame(kite.instruments("NFO"))
 
 banknifty_instruments = nfo_instruments.loc[(
     nfo_instruments.name == 'BANKNIFTY')]
+
 # print(banknifty_instruments)
 # watchlist_instruments = banknifty_instruments.loc[banknifty_instruments.strike == 35000]
 # print(watchlist_instruments)
@@ -244,6 +255,7 @@ candle_writers = {}
 tick_writers = {}
 
 for instrument_token in watchlist:
+
     ticks210[instrument_token] = []
     volume[instrument_token] = 0
     candles[instrument_token] = pd.DataFrame(kite.historical_data(
@@ -264,7 +276,9 @@ open_positions = True
 kws = kite.ticker()
 
 super_trades = []
+
 def on_ticks(ws, ticks):
+
     # Callback to receive ticks.
     for tick in ticks:
 
@@ -302,11 +316,11 @@ def on_ticks(ws, ticks):
 
             candle_df = candles[instrument_token].copy()
 
-            candle_df['rsi13'] = talib.RSI(candle_df['close'], timeperiod=13)
-            candle_df['rsi21'] = talib.RSI(candle_df['close'], timeperiod=21)
-            candle_df['rsi34'] = talib.RSI(candle_df['close'], timeperiod=34)
-            candle_df['ema21'] = talib.EMA(candle_df['close'], timeperiod=21)
-            candle_df['wma21'] = talib.WMA(candle_df['close'], timeperiod=21)
+            candle_df['rsi13'] = RSI(candle_df['close'], timeperiod=13)
+            candle_df['rsi21'] = RSI(candle_df['close'], timeperiod=21)
+            candle_df['rsi34'] = RSI(candle_df['close'], timeperiod=34)
+            candle_df['ema21'] = EMA(candle_df['close'], timeperiod=21)
+            candle_df['wma21'] = WMA(candle_df['close'], timeperiod=21)
             supertrend_df = SuperTrend(candle_df, period=21, multiplier=3)
             supertrend_df = SuperTrend(supertrend_df, period=13, multiplier=2)
             supertrend_df = SuperTrend(supertrend_df, period=8, multiplier=1)
@@ -347,37 +361,37 @@ def on_ticks(ws, ticks):
 
 
             if penultimate_candle.rsi34 > 66:
-                if last_candle.close <= 66:
+                if last_candle.rsi34 <= 66:
                     tradebook.write(
                         f"\n {symbol} Tookoff at 66 - 34 period RSI, ltp: { ltp}")
                     print(symbol, "Touched at 34 period RSI")
 
             if penultimate_candle.rsi21 > 66:
-                if last_candle.close <= 66:
+                if last_candle.rsi21 <= 66:
                     tradebook.write(
                         f"\n {symbol} Tookoff at 79 - 21 period RSI, ltp: { ltp}")
                     print(symbol, "Tookoff at 21 period RSI")
 
             if penultimate_candle.rsi13 > 79:
-                if last_candle.close <= 79:
+                if last_candle.rsi13 <= 79:
                     tradebook.write(
                         f"\n {symbol} Tookoff at 79 - 13 period RSI, ltp: { ltp}")
                     print(symbol, "Tookoff at 21 period RSI")
 
             if penultimate_candle.rsi34 < 34:
-                if last_candle.close >= 34:
+                if last_candle.rsi34 >= 34:
                     tradebook.write(
                         f"\n {symbol} Tookoff at 34 - 34 period RSI, ltp: { ltp}")
                     print(symbol, "Tookoff at 34 period RSI")
 
             if penultimate_candle.rsi21 < 34:
-                if last_candle.close >= 34:
+                if last_candle.rsi21 >= 34:
                     tradebook.write(
                         f"\n {symbol} Tookoff at 34 - 21 period RSI, ltp: { ltp}")
                     print(symbol, "Tookoff at 34 period RSI")
 
             if penultimate_candle.rsi13 < 21:
-                if last_candle.close >= 21:
+                if last_candle.rsi13 >= 21:
                     tradebook.write(
                         f"\n {symbol} Tookoff at 21 - 13 period RSI, ltp: { ltp}")
                     print(symbol, "Tookoff at 13 period RSI")
@@ -410,14 +424,3 @@ kws.on_close = on_close
 # Infinite loop on the main thread. Nothing after this will run.
 # You have to use the pre-defined callbacks to manage subscriptions.
 kws.connect()
-
-
-historical_data = pd.DataFrame(kite.historical_data(
-    260105, today - timedelta(days=34), today, "day"))
-df = SuperTrend(historical_data, period=21, multiplier=3,
-                ohlc=['open', 'high', 'low', 'close'])
-df = SuperTrend(historical_data, period=13, multiplier=2,
-                ohlc=['open', 'high', 'low', 'close'])
-df = SuperTrend(historical_data, period=8, multiplier=1,
-                ohlc=['open', 'high', 'low', 'close'])
-print(df)
