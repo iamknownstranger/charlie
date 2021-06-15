@@ -5,3 +5,6 @@
 
 # When to exit ?
  - exit when there is a buy signal on the call option when open position in put and vice versa
+
+
+# Speed up the for loop 

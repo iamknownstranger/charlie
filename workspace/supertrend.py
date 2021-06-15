@@ -269,14 +269,20 @@ for instrument_token in watchlist:
 
 tradebook = open('tradebook.txt', "w")
 orderbook = open("orderbook.txt", "w")
+super_tradebook = open('super_tradebook.txt', 'w')
+rsi_tradebook = open('rsi_tradebook.txt', 'w')
+
+double_tradebook = open('double_tradebook.txt', 'w')
+triple_tradebook = open('triple_tradebook.txt', 'w')
 
 instrument_token = ''
 ltp = ''
 open_positions = True
+open_trades = []
+triple_trades = []
+double_trades = []
 
 kws = kite.ticker()
-
-super_trades = []
 
 def on_ticks(ws, ticks):
 
@@ -339,63 +345,77 @@ def on_ticks(ws, ticks):
             
             super_candle = supertrend_df.iloc[-1]
 
-            if instrument_token not in super_trades:
+            if instrument_token not in triple_trades:
                 if super_candle.STX_21:
                     if super_candle.STX_13:
                         if super_candle.STX_8:
-                            super_trades.append(instrument_token)
-                            print(f"Triple supertrend buy signal, {symbol} at {get_timestamp()} ltp: {ltp} ")
-                            tradebook.write(f"\nTriple supertrend buy signal, {symbol} at {get_timestamp()} ltp: {ltp} ")
-                
-                elif super_candle.STX_13:
+                            triple_trades.append(instrument_token)
+                            print(
+                                f"Triple supertrend buy signal, {symbol} at {get_timestamp()} ltp: {ltp} ")
+                            super_tradebook.write(
+                                f"\nTriple supertrend buy signal, {symbol} at {get_timestamp()} ltp: {ltp} ")
+
+                if penultimate_candle.rsi34 < 34:
+                    if last_candle.rsi34 >= 34:
+                        if penultimate_candle.rsi21 < 21:
+                            if last_candle.rsi21 >= 21:
+                                if penultimate_candle.rsi13 < 13:
+                                    if last_candle.rsi13 >= 13:
+                                        triple_trades.append(instrument_token)
+                                        print(
+                                            f"Triple RSI buy signal, {symbol} at {get_timestamp()} ltp: {ltp} ")
+                                        rsi_tradebook.write(
+                                            f"\nTriple RSI buy signal, {symbol} at {get_timestamp()} ltp: {ltp} ")
+
+            elif instrument_token in triple_trades:
+                if not super_candle.STX_13:
+                    triple_trades.remove(instrument_token)
+                    print(
+                        f"Triple Supertrend sell signal, {symbol} at {get_timestamp()} ltp: {ltp} ")
+                    super_tradebook.write(
+                        f"\nTriple Supertrend sell signal, {symbol} at {get_timestamp()} ltp: {ltp} ")
+                elif penultimate_candle.rsi21 > 79:
+                    if last_candle.rsi21 <= 79:
+                        triple_trades.remove(instrument_token)
+                        print(
+                            f"Triple RSI sell signal, {symbol} at {get_timestamp()} ltp: {ltp} ")
+                        rsi_tradebook.write(
+                            f"\nTriple RSI sell signal, {symbol} at {get_timestamp()} ltp: {ltp} ")
+
+            if instrument_token not in double_trades:
+                if super_candle.STX_13:
                     if super_candle.STX_8:
-                        print(f"Double supertrend buy signal, {symbol} at {get_timestamp()} ltp: {ltp} ")
-                        tradebook.write(f"\nDouble supertrend buy signal, {symbol} at {get_timestamp()} ltp: {ltp} ")
-            else:
+                        double_trades.append(instrument_token)
+                        print(
+                            f"Double supertrend buy signal, {symbol} at {get_timestamp()} ltp: {ltp} ")
+                        double_tradebook.write(
+                            f"\nDouble supertrend buy signal, {symbol} at {get_timestamp()} ltp: {ltp} ")
+
+                if penultimate_candle.rsi21 < 21:
+                    if last_candle.rsi21 >= 21:
+                        if penultimate_candle.rsi13 < 13:
+                            if last_candle.rsi13 >= 13:
+                                triple_trades.append(instrument_token)
+                                print(
+                                    f"Double RSI buy signal, {symbol} at {get_timestamp()} ltp: {ltp} ")
+                                rsi_tradebook.write(
+                                    f"\nDouble RSI buy signal, {symbol} at {get_timestamp()} ltp: {ltp} ")
+
+            elif instrument_token in double_trades:
                 if not super_candle.STX_8:
-                    super_trades.remove(instrument_token)
-                    print(f"Supertrend 8 sell signal, {symbol} at {get_timestamp()} ltp: {ltp} ")
-                    tradebook.write(f"\nSupertrend 8 sell signal, {symbol} at {get_timestamp()} ltp: {ltp} ")
-                elif last_candle.rsi21 >= 79:
-                    print(f"RSI 21 sell signal, {symbol} at {get_timestamp()} ltp: {ltp} ")
-                    tradebook.write(f"\nRSI 21 sell signal, {symbol} at {get_timestamp()} ltp: {ltp} ")
+                    double_trades.remove(instrument_token)
+                    print(
+                        f"Supertrend 8 sell signal, {symbol} at {get_timestamp()} ltp: {ltp} ")
+                    super_tradebook.write(
+                        f"\nSupertrend 8 sell signal, {symbol} at {get_timestamp()} ltp: {ltp} ")
+                elif penultimate_candle.rsi13 >= 87:
+                    if last_candle.rsi13 <= 87:
+                        double_trades.remove(instrument_token)
+                        print(
+                            f"RSI 13 sell signal, {symbol} at {get_timestamp()} ltp: {ltp} ")
+                        rsi_tradebook.write(
+                            f"\nRSI 13 sell signal, {symbol} at {get_timestamp()} ltp: {ltp} ")
 
-
-            if penultimate_candle.rsi34 > 66:
-                if last_candle.rsi34 <= 66:
-                    tradebook.write(
-                        f"\n {symbol} Breakdown at 66 - 34 period RSI, ltp: { ltp}")
-                    print(symbol, "Breakdown at 34 period RSI")
-
-            if penultimate_candle.rsi21 > 79:
-                if last_candle.rsi21 <= 79:
-                    tradebook.write(
-                        f"\n {symbol} Breakdown at 79 - 21 period RSI, ltp: { ltp}")
-                    print(symbol, "Breakdown at 21 period RSI")
-
-            if penultimate_candle.rsi13 > 87:
-                if last_candle.rsi13 <= 87:
-                    tradebook.write(
-                        f"\n {symbol} Breakdown at 87 - 13 period RSI, ltp: { ltp}")
-                    print(symbol, "Breakdown at 13 period RSI")
-
-            if penultimate_candle.rsi34 < 34:
-                if last_candle.rsi34 >= 34:
-                    tradebook.write(
-                        f"\n {symbol} Tookoff at 34 - 34 period RSI, ltp: { ltp}")
-                    print(symbol, "Tookoff at 34 period RSI")
-
-            if penultimate_candle.rsi21 < 21:
-                if last_candle.rsi21 >= 21:
-                    tradebook.write(
-                        f"\n {symbol} Tookoff at 21 - 21 period RSI, ltp: { ltp}")
-                    print(symbol, "Tookoff at 21 period RSI")
-
-            if penultimate_candle.rsi13 < 13:
-                if last_candle.rsi13 >= 13:
-                    tradebook.write(
-                        f"\n {symbol} Tookoff at 13 - 13 period RSI, ltp: { ltp}")
-                    print(symbol, "Tookoff at 13 period RSI")
             ticks210[instrument_token] = []
             volume[instrument_token] = 0
 
