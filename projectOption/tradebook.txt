@@ -1,0 +1,376 @@
+
+ORB Breakout 141701142021:06:14 09:15:00 IST +0530
+ORB Breakout 141701142021:06:14 09:15:01 IST +0530
+ORB Breakout 127411222021:06:14 09:15:01 IST +0530
+ORB Breakout 141701142021:06:14 09:15:01 IST +0530
+ORB Breakout 127411222021:06:14 09:15:01 IST +0530
+ORB Breakout 127411222021:06:14 09:15:02 IST +0530
+ORB Breakout 127411222021:06:14 09:15:03 IST +0530
+ORB Breakout 127411222021:06:14 09:15:03 IST +0530
+ORB Breakdown 141701142021:06:14 09:15:03 IST +0530
+ORB Breakdown 141701142021:06:14 09:15:04 IST +0530
+ORB Breakout 127411222021:06:14 09:15:04 IST +0530
+ORB Breakdown 141701142021:06:14 09:15:10 IST +0530
+ORB Breakdown 127411222021:06:14 09:15:10 IST +0530
+ORB Breakdown 127411222021:06:14 09:15:28 IST +0530
+Close below days low - Breakdown 141701142021:06:14 09:17:08 IST +0530
+Close below days low - Breakdown 127411222021:06:14 09:17:34 IST +0530
+Close below days low - Breakdown 141701142021:06:14 09:19:18 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 21 period RSI, ltp: 530.0
+ BANKNIFTY21JUN35000CE Tookoff at 21 - 13 period RSI, ltp: 530.0
+ORB Breakdown 127411222021:06:14 09:20:18 IST +0530
+ORB Breakdown 127411222021:06:14 09:20:21 IST +0530
+Close below days low - Breakdown 127411222021:06:14 09:20:28 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 21 period RSI, ltp: 553.7
+ BANKNIFTY21JUN34900CE Tookoff at 21 - 13 period RSI, ltp: 553.7
+ORB Breakdown 127411222021:06:14 09:20:31 IST +0530
+ORB Breakdown 141701142021:06:14 09:20:33 IST +0530
+ORB Breakdown 127411222021:06:14 09:20:44 IST +0530
+ORB Breakdown 127411222021:06:14 09:20:45 IST +0530
+Close below days low - Breakdown 141701142021:06:14 09:21:29 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 21 period RSI, ltp: 497.0
+ BANKNIFTY21JUN35000CE Tookoff at 21 - 13 period RSI, ltp: 497.0
+ORB Breakdown 141701142021:06:14 09:22:39 IST +0530
+ORB Breakdown 141701142021:06:14 09:22:51 IST +0530
+ORB Breakdown 127411222021:06:14 09:22:52 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 21 period RSI, ltp: 535.0
+ BANKNIFTY21JUN34900CE Tookoff at 21 - 13 period RSI, ltp: 535.0
+ORB Breakdown 141701142021:06:14 09:22:54 IST +0530
+Close below days low - Breakdown 141701142021:06:14 09:23:42 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 21 period RSI, ltp: 482.45
+ BANKNIFTY21JUN35000CE Tookoff at 21 - 13 period RSI, ltp: 482.45
+ORB Breakdown 127411222021:06:14 09:23:54 IST +0530
+ORB Breakdown 127411222021:06:14 09:24:03 IST +0530
+ORB Breakdown 127411222021:06:14 09:24:04 IST +0530
+ORB Breakdown 141701142021:06:14 09:24:56 IST +0530
+ORB Breakdown 127411222021:06:14 09:24:56 IST +0530
+ORB Breakdown 141701142021:06:14 09:25:05 IST +0530
+ORB Breakdown 127411222021:06:14 09:25:10 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 21 period RSI, ltp: 524.6
+ BANKNIFTY21JUN34900CE Tookoff at 21 - 13 period RSI, ltp: 524.6
+ORB Breakdown 127411222021:06:14 09:25:14 IST +0530
+ORB Breakdown 141701142021:06:14 09:25:28 IST +0530
+ORB Breakdown 127411222021:06:14 09:25:28 IST +0530
+ORB Breakdown 141701142021:06:14 09:25:31 IST +0530
+ORB Breakdown 127411222021:06:14 09:25:32 IST +0530
+ORB Breakdown 141701142021:06:14 09:25:34 IST +0530
+ORB Breakdown 127411222021:06:14 09:25:36 IST +0530
+ORB Breakdown 141701142021:06:14 09:25:38 IST +0530
+Close below days low - Breakdown 141701142021:06:14 09:25:54 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 21 period RSI, ltp: 451.3
+ BANKNIFTY21JUN35000CE Tookoff at 21 - 13 period RSI, ltp: 451.3
+Close below days low - Breakdown 127411222021:06:14 09:27:32 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 21 period RSI, ltp: 501.75
+ BANKNIFTY21JUN34900CE Tookoff at 21 - 13 period RSI, ltp: 501.75
+Close below days low - Breakdown 141701142021:06:14 09:28:07 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 21 period RSI, ltp: 451.0
+ BANKNIFTY21JUN35000CE Tookoff at 21 - 13 period RSI, ltp: 451.0
+ORB Breakdown 141701142021:06:14 09:29:30 IST +0530
+ORB Breakdown 127411222021:06:14 09:29:32 IST +0530
+ORB Breakdown 127411222021:06:14 09:29:43 IST +0530
+ORB Breakdown 141701142021:06:14 09:29:45 IST +0530
+ORB Breakdown 127411222021:06:14 09:29:46 IST +0530
+ORB Breakdown 127411222021:06:14 09:29:48 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 21 period RSI, ltp: 461.0
+ BANKNIFTY21JUN34900CE Tookoff at 21 - 13 period RSI, ltp: 461.0
+ORB Breakdown 141701142021:06:14 09:29:49 IST +0530
+ORB Breakdown 141701142021:06:14 09:30:03 IST +0530
+ORB Breakdown 141701142021:06:14 09:30:07 IST +0530
+ORB Breakdown 141701142021:06:14 09:30:07 IST +0530
+ORB Breakdown 127411222021:06:14 09:30:10 IST +0530
+ORB Breakdown 127411222021:06:14 09:30:13 IST +0530
+Close below days low - Breakdown 141701142021:06:14 09:30:14 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 21 period RSI, ltp: 377.2
+ BANKNIFTY21JUN35000CE Tookoff at 21 - 13 period RSI, ltp: 377.2
+ORB Breakdown 141701142021:06:14 09:30:22 IST +0530
+ORB Breakdown 127411222021:06:14 09:30:22 IST +0530
+Close below days low - Breakdown 127411222021:06:14 09:32:16 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 21 period RSI, ltp: 424.7
+ BANKNIFTY21JUN34900CE Tookoff at 21 - 13 period RSI, ltp: 424.7
+Close below days low - Breakdown 141701142021:06:14 09:32:23 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 21 period RSI, ltp: 379.05
+ BANKNIFTY21JUN35000CE Tookoff at 21 - 13 period RSI, ltp: 379.05
+Close below days low - Breakdown 141701142021:06:14 09:34:37 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 21 period RSI, ltp: 392.0
+ BANKNIFTY21JUN35000CE Tookoff at 21 - 13 period RSI, ltp: 392.0
+Close below days low - Breakdown 127411222021:06:14 09:34:43 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 21 period RSI, ltp: 431.6
+ BANKNIFTY21JUN34900CE Tookoff at 21 - 13 period RSI, ltp: 431.6
+Close below days low - Breakdown 141701142021:06:14 09:36:57 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 21 period RSI, ltp: 405.0
+ BANKNIFTY21JUN35000CE Tookoff at 21 - 13 period RSI, ltp: 405.0
+Close below days low - Breakdown 127411222021:06:14 09:37:12 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 21 period RSI, ltp: 455.0
+ BANKNIFTY21JUN34900CE Tookoff at 21 - 13 period RSI, ltp: 455.0
+Close below days low - Breakdown 141701142021:06:14 09:39:12 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 21 period RSI, ltp: 413.05
+ BANKNIFTY21JUN35000CE Tookoff at 21 - 13 period RSI, ltp: 413.05
+Close below days low - Breakdown 127411222021:06:14 09:39:38 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 21 period RSI, ltp: 454.45
+ BANKNIFTY21JUN34900CE Tookoff at 21 - 13 period RSI, ltp: 454.45
+Close below days low - Breakdown 141701142021:06:14 09:41:24 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 21 period RSI, ltp: 397.4
+Close below days low - Breakdown 127411222021:06:14 09:41:55 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 21 period RSI, ltp: 446.0
+ BANKNIFTY21JUN34900CE Tookoff at 21 - 13 period RSI, ltp: 446.0
+Close below days low - Breakdown 141701142021:06:14 09:43:40 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 21 period RSI, ltp: 417.95
+ BANKNIFTY21JUN35000CE Tookoff at 21 - 13 period RSI, ltp: 417.95
+Close below days low - Breakdown 127411222021:06:14 09:44:37 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 21 period RSI, ltp: 465.0
+ BANKNIFTY21JUN34900CE Tookoff at 21 - 13 period RSI, ltp: 465.0
+Close below days low - Breakdown 141701142021:06:14 09:45:53 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 399.85
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 21 period RSI, ltp: 399.85
+Close below days low - Breakdown 127411222021:06:14 09:47:07 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 21 period RSI, ltp: 447.8
+Close below days low - Breakdown 141701142021:06:14 09:48:15 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 404.45
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 21 period RSI, ltp: 404.45
+Close below days low - Breakdown 127411222021:06:14 09:49:49 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 448.45
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 21 period RSI, ltp: 448.45
+ BANKNIFTY21JUN34900CE Tookoff at 21 - 13 period RSI, ltp: 448.45
+Close below days low - Breakdown 141701142021:06:14 09:50:32 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 402.45
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 21 period RSI, ltp: 402.45
+Close below days low - Breakdown 127411222021:06:14 09:52:06 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 445.95
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 21 period RSI, ltp: 445.95
+Close below days low - Breakdown 141701142021:06:14 09:52:54 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 404.75
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 21 period RSI, ltp: 404.75
+Close below days low - Breakdown 127411222021:06:14 09:54:56 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 453.0
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 21 period RSI, ltp: 453.0
+ BANKNIFTY21JUN34900CE Tookoff at 21 - 13 period RSI, ltp: 453.0
+Close below days low - Breakdown 141701142021:06:14 09:55:25 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 408.4
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 21 period RSI, ltp: 408.4
+Close below days low - Breakdown 127411222021:06:14 09:57:42 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 467.65
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 21 period RSI, ltp: 467.65
+Close below days low - Breakdown 141701142021:06:14 09:57:55 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 427.0
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 21 period RSI, ltp: 427.0
+Close below days low - Breakdown 127411222021:06:14 09:59:58 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 485.0
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 21 period RSI, ltp: 485.0
+Close below days low - Breakdown 141701142021:06:14 10:00:05 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 432.55
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 21 period RSI, ltp: 432.55
+Close below days low - Breakdown 127411222021:06:14 10:02:24 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 480.0
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 21 period RSI, ltp: 480.0
+Close below days low - Breakdown 141701142021:06:14 10:02:27 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 424.75
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 21 period RSI, ltp: 424.75
+Close below days low - Breakdown 141701142021:06:14 10:04:38 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 421.8
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 21 period RSI, ltp: 421.8
+Close below days low - Breakdown 127411222021:06:14 10:04:46 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 473.55
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 21 period RSI, ltp: 473.55
+Close below days low - Breakdown 141701142021:06:14 10:07:01 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 428.85
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 21 period RSI, ltp: 428.85
+Close below days low - Breakdown 127411222021:06:14 10:07:26 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 478.6
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 21 period RSI, ltp: 478.6
+Close below days low - Breakdown 141701142021:06:14 10:09:43 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 426.9
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 21 period RSI, ltp: 426.9
+Close below days low - Breakdown 127411222021:06:14 10:10:04 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 477.55
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 21 period RSI, ltp: 477.55
+Close below days low - Breakdown 141701142021:06:14 10:12:17 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 436.0
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 21 period RSI, ltp: 436.0
+Close below days low - Breakdown 127411222021:06:14 10:12:52 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 478.2
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 21 period RSI, ltp: 478.2
+Close below days low - Breakdown 141701142021:06:14 10:14:45 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 436.75
+Close below days low - Breakdown 127411222021:06:14 10:15:29 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 484.6
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 21 period RSI, ltp: 484.6
+Close below days low - Breakdown 141701142021:06:14 10:17:08 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 428.0
+Close below days low - Breakdown 127411222021:06:14 10:17:59 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 476.0
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 21 period RSI, ltp: 476.0
+Close below days low - Breakdown 141701142021:06:14 10:19:31 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 422.8
+Close below days low - Breakdown 127411222021:06:14 10:20:33 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 480.7
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 21 period RSI, ltp: 480.7
+Close below days low - Breakdown 141701142021:06:14 10:21:52 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 439.0
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 21 period RSI, ltp: 439.0
+Close below days low - Breakdown 127411222021:06:14 10:23:03 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 487.2
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 21 period RSI, ltp: 487.2
+Close below days low - Breakdown 141701142021:06:14 10:24:22 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 439.4
+Close below days low - Breakdown 127411222021:06:14 10:25:38 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 485.45
+Close below days low - Breakdown 141701142021:06:14 10:26:52 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 431.95
+Close below days low - Breakdown 127411222021:06:14 10:28:16 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 481.9
+Close below days low - Breakdown 141701142021:06:14 10:29:21 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 434.5
+Close below days low - Breakdown 127411222021:06:14 10:30:54 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 470.0
+Close below days low - Breakdown 141701142021:06:14 10:31:47 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 427.2
+Close below days low - Breakdown 127411222021:06:14 10:33:28 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 474.85
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 21 period RSI, ltp: 474.85
+Close below days low - Breakdown 141701142021:06:14 10:34:11 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 433.35
+Close below days low - Breakdown 127411222021:06:14 10:36:01 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 477.45
+Close below days low - Breakdown 141701142021:06:14 10:36:45 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 426.6
+Close below days low - Breakdown 127411222021:06:14 10:38:49 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 480.0
+Close below days low - Breakdown 141701142021:06:14 10:39:19 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 429.9
+Close below days low - Breakdown 127411222021:06:14 10:41:24 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 474.4
+Close below days low - Breakdown 141701142021:06:14 10:41:33 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 427.95
+Close below days low - Breakdown 127411222021:06:14 10:44:14 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 475.0
+Close below days low - Breakdown 141701142021:06:14 10:44:25 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 427.0
+Close below days low - Breakdown 127411222021:06:14 10:46:49 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 465.4
+Close below days low - Breakdown 141701142021:06:14 10:46:53 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 417.1
+Close below days low - Breakdown 141701142021:06:14 10:49:09 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 429.9
+Close below days low - Breakdown 127411222021:06:14 10:49:22 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 478.0
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 21 period RSI, ltp: 478.0
+Close below days low - Breakdown 141701142021:06:14 10:51:45 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 429.15
+Close below days low - Breakdown 127411222021:06:14 10:51:52 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 472.45
+Close below days low - Breakdown 141701142021:06:14 10:54:30 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 420.65
+Close below days low - Breakdown 127411222021:06:14 10:54:50 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 467.95
+Close below days low - Breakdown 141701142021:06:14 10:57:00 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 420.55
+Close below days low - Breakdown 127411222021:06:14 10:57:36 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 469.45
+Close below days low - Breakdown 141701142021:06:14 10:59:27 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 414.4
+Close below days low - Breakdown 127411222021:06:14 11:00:11 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 463.1
+Close below days low - Breakdown 141701142021:06:14 11:01:47 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 409.25
+Close below days low - Breakdown 127411222021:06:14 11:03:06 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 453.65
+Close below days low - Breakdown 141701142021:06:14 11:04:28 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 407.0
+Close below days low - Breakdown 127411222021:06:14 11:06:03 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 449.65
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 21 period RSI, ltp: 449.65
+Close below days low - Breakdown 141701142021:06:14 11:06:56 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 403.9
+Close below days low - Breakdown 127411222021:06:14 11:08:21 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 438.35
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 21 period RSI, ltp: 438.35
+Close below days low - Breakdown 141701142021:06:14 11:09:19 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 398.25
+Close below days low - Breakdown 127411222021:06:14 11:11:04 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 439.8
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 21 period RSI, ltp: 439.8
+Close below days low - Breakdown 141701142021:06:14 11:11:55 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 392.7
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 21 period RSI, ltp: 392.7
+Close below days low - Breakdown 127411222021:06:14 11:13:23 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 446.0
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 21 period RSI, ltp: 446.0
+Close below days low - Breakdown 141701142021:06:14 11:14:16 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 406.15
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 21 period RSI, ltp: 406.15
+Close below days low - Breakdown 127411222021:06:14 11:16:10 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 455.5
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 21 period RSI, ltp: 455.5
+Close below days low - Breakdown 141701142021:06:14 11:16:52 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 403.9
+Close below days low - Breakdown 127411222021:06:14 11:18:41 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 450.95
+Close below days low - Breakdown 141701142021:06:14 11:19:20 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 404.15
+Close below days low - Breakdown 127411222021:06:14 11:21:15 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 447.0
+Close below days low - Breakdown 141701142021:06:14 11:21:49 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 400.9
+Close below days low - Breakdown 127411222021:06:14 11:23:43 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 444.95
+Close below days low - Breakdown 141701142021:06:14 11:24:16 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 398.5
+Close below days low - Breakdown 127411222021:06:14 11:26:25 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 442.55
+Close below days low - Breakdown 141701142021:06:14 11:26:49 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 403.7
+Close below days low - Breakdown 127411222021:06:14 11:29:37 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 451.0
+Close below days low - Breakdown 141701142021:06:14 11:29:43 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 406.1
+Close below days low - Breakdown 141701142021:06:14 11:32:31 IST +0530
+Close below days low - Breakdown 127411222021:06:14 11:32:34 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 452.0
+Close below days low - Breakdown 141701142021:06:14 11:34:50 IST +0530
+ BANKNIFTY21JUN35000CE Tookoff at 34 - 34 period RSI, ltp: 406.35
+Close below days low - Breakdown 127411222021:06:14 11:34:53 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 453.2
+Close below days low - Breakdown 141701142021:06:14 11:37:05 IST +0530
+Close below days low - Breakdown 127411222021:06:14 11:37:21 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 448.55
+Close below days low - Breakdown 141701142021:06:14 11:39:27 IST +0530
+Close below days low - Breakdown 127411222021:06:14 11:40:04 IST +0530
+ BANKNIFTY21JUN34900CE Tookoff at 34 - 34 period RSI, ltp: 456.65
+Close below days low - Breakdown 141701142021:06:14 11:41:44 IST +0530
+Close below days low - Breakdown 127411222021:06:14 11:42:25 IST +0530
+Close below days low - Breakdown 141701142021:06:14 11:44:18 IST +0530
+Close below days low - Breakdown 127411222021:06:14 11:45:25 IST +0530
+Close below days low - Breakdown 141701142021:06:14 11:46:51 IST +0530
+Close below days low - Breakdown 127411222021:06:14 11:47:46 IST +0530
+Close below days low - Breakdown 141701142021:06:14 11:49:10 IST +0530
+Close below days low - Breakdown 127411222021:06:14 11:50:15 IST +0530
+Close below days low - Breakdown 141701142021:06:14 11:51:36 IST +0530
+Close below days low - Breakdown 127411222021:06:14 11:52:57 IST +0530
+Close below days low - Breakdown 141701142021:06:14 11:54:25 IST +0530
+Close below days low - Breakdown 127411222021:06:14 11:55:39 IST +0530
+Close below days low - Breakdown 141701142021:06:14 11:56:42 IST +0530
+Close below days low - Breakdown 127411222021:06:14 11:58:15 IST +0530
+Close below days low - Breakdown 141701142021:06:14 11:59:12 IST +0530
+Close below days low - Breakdown 127411222021:06:14 12:01:13 IST +0530
+Close below days low - Breakdown 141701142021:06:14 12:02:00 IST +0530
+Close below days low - Breakdown 127411222021:06:14 12:03:55 IST +0530
+Close below days low - Breakdown 141701142021:06:14 12:04:12 IST +0530
+Close below days low - Breakdown 141701142021:06:14 12:06:33 IST +0530
+Close below days low - Breakdown 127411222021:06:14 12:06:33 IST +0530
+Close below days low - Breakdown 141701142021:06:14 12:09:02 IST +0530
+Close below days low - Breakdown 127411222021:06:14 12:09:07 IST +0530
+Close below days low - Breakdown 141701142021:06:14 12:11:27 IST +0530
+Close below days low - Breakdown 127411222021:06:14 12:11:42 IST +0530
+Close below days low - Breakdown 141701142021:06:14 12:13:44 IST +0530
+Close below days low - Breakdown 127411222021:06:14 12:14:10 IST +0530
+Close below days low - Breakdown 141701142021:06:14 12:16:18 IST +0530
+Close below days low - Breakdown 127411222021:06:14 12:17:00 IST +0530
+Close below days low - Breakdown 141701142021:06:14 12:18:45 IST +0530
+Close below days low - Breakdown 127411222021:06:14 12:19:38 IST +0530
+Close below days low - Breakdown 141701142021:06:14 12:21:31 IST +0530
+Close below days low - Breakdown 127411222021:06:14 12:22:29 IST +0530
+Close below days low - Breakdown 141701142021:06:14 12:23:57 IST +0530
+Close below days low - Breakdown 127411222021:06:14 12:24:51 IST +0530
+Close below days low - Breakdown 141701142021:06:14 12:26:16 IST +0530
+Close below days low - Breakdown 127411222021:06:14 12:27:22 IST +0530
+Close below days low - Breakdown 141701142021:06:14 12:29:02 IST +0530

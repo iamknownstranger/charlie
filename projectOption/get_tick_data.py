@@ -76,16 +76,16 @@ watchlist = []
 tickertape = {}
 strikes = []
 
-for quote in quotes:
-    strike = quote - ( quote % 100 )
+for strike in range(banknifty_low, banknifty_high, 100):
     if strike not in strikes:
         strikes.append(strikes)
-        monthly_options = banknifty_instruments.loc[banknifty_instruments.strike == strike, ['instrument_token', 'tradingsymbol']].head(2)
+        monthly_options = banknifty_instruments.loc[banknifty_instruments.strike == strike, [
+            'instrument_token', 'tradingsymbol']].head(2)
         call_instrument_token, call_tradingsymbol = monthly_options.values[0]
         put_instrument_token, put_tradingsymbol = monthly_options.values[1]
         tickertape[call_instrument_token] = call_tradingsymbol
         tickertape[put_instrument_token] = put_tradingsymbol
-        watchlist.append(call_instrument_token) 
+        watchlist.append(call_instrument_token)
         watchlist.append(call_instrument_token)
 
 print(tickertape)

@@ -1,3 +1,4 @@
+from pandas._libs.tslibs import Timestamp
 from talib import RSI, WMA
 import talib
 import numpy as np
@@ -276,6 +277,8 @@ open_positions = True
 
 kws = kite.ticker()
 
+open_positions = []
+rsi_trades = []
 super_trades = []
 
 def on_ticks(ws, ticks):
@@ -287,28 +290,22 @@ def on_ticks(ws, ticks):
         ltp = tick['last_price']
         ohlc = tick['ohlc']
         last_quantity = tick['last_quantity']
-
-        if(ltp > ohlc['high']):
-            tradebook.write(
-                "\nORB Breakout " + str(instrument_token) + get_timestamp())
-        elif(ltp < ohlc['low']):
-            tradebook.write("\nORB Breakdown " +
-                            str(instrument_token) + get_timestamp())
+        timestamp = get_timestamp()
 
         tick_writers[instrument_token].writerow(
-            [get_timestamp(), ltp, last_quantity, ohlc])
-
+            [timestamp, ltp, last_quantity])
         ticks210[instrument_token].append(ltp)
         volume[instrument_token] += last_quantity
 
         if(len(ticks210[instrument_token]) == 210):
 
+            symbol = tickertape[instrument_token]
             candle_open = ticks210[instrument_token][0]
             candle_high = max(ticks210[instrument_token])
             candle_low = min(ticks210[instrument_token])
             candle_close = ticks210[instrument_token][-1]
             candle_volume = volume[instrument_token]
-            candle_data = [get_timestamp(), candle_open, candle_high,
+            candle_data = [timestamp, candle_open, candle_high,
                            candle_low, candle_close, candle_volume]
 
             candle_dataframe_length = len(candles[instrument_token])
@@ -326,18 +323,13 @@ def on_ticks(ws, ticks):
             supertrend_df = SuperTrend(supertrend_df, period=13, multiplier=2)
             supertrend_df = SuperTrend(supertrend_df, period=8, multiplier=1)
 
-            if(ticks210[instrument_token][-1] > ohlc['high']):
-                tradebook.write(
-                    "\nClose above Day High - Breakout " + str(instrument_token) + get_timestamp())
-            elif(ticks210[instrument_token][-1] > ohlc['low']):
-                tradebook.write("\nClose below days low - Breakdown " +
-                                str(instrument_token) + get_timestamp())
-
             penultimate_candle = candle_df.iloc[-2]
             last_candle = candle_df.iloc[-1]
-            symbol = tickertape[instrument_token]
             
             super_candle = supertrend_df.iloc[-1]
+            
+            if instrument_token not in open_positions:
+
 
             if instrument_token not in super_trades:
                 if super_candle.STX_21:
@@ -348,7 +340,7 @@ def on_ticks(ws, ticks):
                             tradebook.write(f"\nTriple supertrend buy signal, {symbol} at {get_timestamp()} ltp: {ltp} ")
                 
                 elif super_candle.STX_13:
-                    if super_candle.STX_8:
+                    if super_candle.STX:
                         print(f"Double supertrend buy signal, {symbol} at {get_timestamp()} ltp: {ltp} ")
                         tradebook.write(f"\nDouble supertrend buy signal, {symbol} at {get_timestamp()} ltp: {ltp} ")
             else:
@@ -367,8 +359,8 @@ def on_ticks(ws, ticks):
                         f"\n {symbol} Breakdown at 66 - 34 period RSI, ltp: { ltp}")
                     print(symbol, "Breakdown at 34 period RSI")
 
-            if penultimate_candle.rsi21 > 79:
-                if last_candle.rsi21 <= 79:
+            if penultimate_candle.rsi21 > 66:
+                if last_candle.rsi21 <= 66:
                     tradebook.write(
                         f"\n {symbol} Breakdown at 79 - 21 period RSI, ltp: { ltp}")
                     print(symbol, "Breakdown at 21 period RSI")
