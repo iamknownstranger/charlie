@@ -1,7 +1,8 @@
 import pandas as pd
 import csv
 
-ticks = pd.read_csv("10393090_ticks.csv")
+ticks = pd.read_csv(
+    "/workspaces/charlie/workspace/BANKNIFTY21JUN34500CE_ticks.csv")
 ticks.columns = ["timestamp", "last_price", "last_quantity", "ohlc"]
 ticks_list = ticks['last_price']
 
@@ -28,10 +29,12 @@ def batch(iterable, batch_number=10):
         else:
             yield iterable[idx:min(idx+batch_number, l)]
 
-csv_writer = csv.writer(open("210_10393090_ticks.csv", "w"))
+
+csv_writer = csv.writer(
+    open("/workspaces/charlie/workspace/BANKNIFTY21JUN34500CE_ohlc314.csv", "w"))
 
 candles = pd.DataFrame()
-for chunk in batch(ticks, 210):
+for chunk in batch(ticks, 314):
     timestamp = chunk.timestamp.iloc[-1]
     candle_open = chunk.last_price.iloc[0]
     candle_high = chunk.last_price.max()
