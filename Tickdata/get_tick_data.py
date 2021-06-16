@@ -37,8 +37,9 @@ instruments = pd.DataFrame(nfo_instruments)
 
 banknifty_instruments = instruments.loc[instruments.name =="BANKNIFTY"]
 properties = {}
+watchlist = []
 for instrument in banknifty_instruments.iterrows():
-    print(instrument[1]['instrument_token'])
+    watchlist.append(instrument[1]['instrument_token'])
     
     properties[instrument[1]['instrument_token']] = instrument[1]['tradingsymbol']
 
@@ -58,11 +59,10 @@ print(properties)
 # del tradingsymbols[-2]
 # print(tradingsymbols)
 
-watchlist = instruments.loc[instruments.tradingsymbol.isin(tradingsymbols)].instrument_token.tolist()
+# watchlist = instruments.loc[instruments.tradingsymbol.isin(tradingsymbols)].instrument_token.tolist()
 watchlist.append(260105)
 
-ticks144 = {}
-volume144 = {}
+ticks210 = {}
 tick_data = {}
 candle_writers = {}
 tick_writers = {}
