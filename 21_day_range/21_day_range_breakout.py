@@ -74,6 +74,6 @@ for instrument_token in watchlist:
                 
                 print('\n', instrument_token, stocks[instrument_token], today_range, last_price, highest_high)
         else:
-                print("=", end='')
+            print("=", end='')
     except:
         continue
