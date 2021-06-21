@@ -70,8 +70,11 @@ for instrument_token in watchlist:
      
             if last_price >= highest_high:
                 
-                print('\n', instrument_token, stocks[instrument_token], today_range, last_price, highest_high)
-        else:
-            print("=", end='')
+                # print("21 Day Range - Highest High Breakout")
+                if today_range >= 2.1:
+                    print(instrument_token, stocks[instrument_token], today_range, last_price, highest_high)
+            # else:
+            #     print("21 Day Range Breakout")
+
     except:
         continue

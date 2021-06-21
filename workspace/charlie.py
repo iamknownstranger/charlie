@@ -1,76 +1,38 @@
-from pandas.tseries.offsets import BDay
+from kiteconnect import ticker
+from talib import RSI, WMA
+import talib
+import numpy as np
 from pprint import pprint
 from jugaad_trader import Zerodha
 import pandas as pd
 import pytz
-from datetime import datetime
+from datetime import datetime, timedelta
 import csv
-import numpy as np
+from pandas.tseries.offsets import BDay
+
+print("Om Namahshivaya:")
 
 
-print('Om Namahshivaya:')
-
-
-# class TickData:
-
-#     def __init__(self, watchlist)
-#         self.candles = {}
-#         self.ticks = {}
-#         for instrument_token in watchlist:
-#             candles[instrument_token] = pd.DataFrame()
-
-
-
-# get the standard UTC time
-UTC = pytz.utc
-
-# it will get the time zone
-# of the specified location
-IST = pytz.timezone('Asia/Kolkata')
-
-
-def get_timestamp():
-    return datetime.now(IST).strftime('%Y:%m:%d %H:%M:%S %Z %z')
-
-
-previous_trading_day = (datetime.today() - BDay(1)).strftime('%Y-%m-%d')
-
-
-def get_ltp(instrument_token):
-    return kite.ltp(instrument_token)[str(instrument_token)]['last_price']
-
-# def buy(instrument_token):
-#     if instrument_token not in open_trades:
-#         buy_price = get_ltp(instrument_token)
-#         orderbook.write("Bought " + ticker_dictionary.get(instrument_token, 'No Key Found')['name'] + " at " + str(buy_price))
-#         open_trades.append(instrument_token)
-
-# def sell(instrument_token):
-#     if instrument_token in open_trades:
-#         sell_price = get_ltp(instrument_token)
-#         orderbook.write("Sold " + ticker_dictionary.get(instrument_token, 'No Key Found')['name'] + " at " + str(sell_price) )
-#         open_trades.remove(instrument_token)
-
+today = datetime.today()
+previous_trading_day = (datetime.today() - BDay(1)).strftime("%Y-%m-%d")
 
 kite = Zerodha()
+
 
 # Set access token loads the stored session.
 # Name chosen to keep it compatible with kiteconnect.
 kite.set_access_token()
 
-# nfo_instruments = pd.DataFrame(kite.instruments("NFO"))
+# historical_data = pd.DataFrame(kite.historical_data(
+#     260105, today - timedelta(days=34), today, "day"))
 
-# banknifty_instruments = nfo_instruments.loc[(nfo_instruments.name == 'BANKNIFTY')]
-# # print(banknifty_instruments)
-# watchlist_dataframe = pd.DataFrame()
-# watchlist_dataframe.append(banknifty_instruments.loc[banknifty_instruments.strike == 35000, ['instrument_token', 'tradingsymbol']].head(2))
-# print(watchlist_dataframe)
-# watchlist_instruments = banknifty_instruments.loc[banknifty_instruments.strike == 35000, ['instrument_token', 'tradingsymbol']].head(2).values[0]
-# print(watchlist_instruments)
-
-# call_instrument_token = nfo_instruments.loc[(nfo_instruments.n == )].instrument_token.values[0]
-# put_instrument_token = nfo_instruments.loc[(nfo_instruments.tradingsymbol == put_tradingsymbol)].instrument_token.values[0]
-
+# df = SuperTrend(historical_data, period=21, multiplier=3,
+#                 ohlc=['open', 'high', 'low', 'close'])
+# df = SuperTrend(historical_data, period=13, multiplier=2,
+#                 ohlc=['open', 'high', 'low', 'close'])
+# df = SuperTrend(historical_data, period=8, multiplier=1,
+#                 ohlc=['open', 'high', 'low', 'close'])
+# print(df)
 
 
 # Source for tech indicator : https://github.com/arkochhar/Technical-Indicators/blob/master/indicator/indicators.py
@@ -152,8 +114,8 @@ def SuperTrend(df, period=supertrend_period, multiplier=supertrend_multiplier, o
 
     ATR(df, period, ohlc=ohlc)
     atr = 'ATR_' + str(period)
-    st = 'ST'  # + str(period) + '_' + str(multiplier)
-    stx = 'STX'  # + str(period) + '_' + str(multiplier)
+    st = 'ST_' + str(period)  # + '_' + str(multiplier)
+    stx = 'STX_' + str(period)  # + '_' + str(multiplier)
 
     """
     SuperTrend Algorithm :
@@ -205,7 +167,7 @@ def SuperTrend(df, period=supertrend_period, multiplier=supertrend_multiplier, o
 
         # Mark the trend direction up/down
     df[stx] = np.where((df[st] > 0.00), np.where(
-        (df[ohlc[3]] < df[st]), 'down', 'up'), np.NaN)
+        (df[ohlc[3]] < df[st]), False, True), np.NaN)
 
     # Remove basic and final bands from the columns
     df.drop(['basic_ub', 'basic_lb', 'final_ub',
@@ -213,3 +175,80 @@ def SuperTrend(df, period=supertrend_period, multiplier=supertrend_multiplier, o
 
     df.fillna(0, inplace=True)
     return df
+
+
+# get the standard UTC time
+UTC = pytz.utc
+
+# it will get the time zone
+# of the specified location
+IST = pytz.timezone('Asia/Kolkata')
+
+
+def get_timestamp():
+    return datetime.now(IST).strftime('%Y:%m:%d %H:%M:%S %Z %z')
+
+
+previous_trading_day = (datetime.today() - BDay(1)).strftime('%Y-%m-%d')
+
+
+def get_ltp(instrument_token):
+    return kite.ltp(instrument_token)[str(instrument_token)]['last_price']
+
+# def buy(instrument_token):
+#     if instrument_token not in open_trades:
+#         buy_price = get_ltp(instrument_token)
+#         orderbook.write("Bought " + ticker_dictionary.get(instrument_token, 'No Key Found')['name'] + " at " + str(buy_price))
+#         open_trades.append(instrument_token)
+
+# def sell(instrument_token):
+#     if instrument_token in open_trades:
+#         sell_price = get_ltp(instrument_token)
+#         orderbook.write("Sold " + ticker_dictionary.get(instrument_token, 'No Key Found')['name'] + " at " + str(sell_price) )
+#         open_trades.remove(instrument_token)
+
+
+kite = Zerodha()
+
+# Set access token loads the stored session.
+# Name chosen to keep it compatible with kiteconnect.
+kite.set_access_token()
+
+banknifty_instrument_token = 260105
+
+previous_trading_day_banknifty_ohlc = kite.historical_data(
+    banknifty_instrument_token, previous_trading_day, previous_trading_day, "day")[0]
+
+banknifty_high = round(previous_trading_day_banknifty_ohlc['high'])
+banknifty_high = banknifty_high - (banknifty_high % 100)
+banknifty_low = round(previous_trading_day_banknifty_ohlc['low'])
+banknifty_low = banknifty_low - (banknifty_low % 100)
+
+nfo_instruments = pd.DataFrame(kite.instruments("NFO"))
+
+banknifty_instruments = nfo_instruments.loc[(
+    nfo_instruments.name == 'BANKNIFTY')]
+
+
+# print(banknifty_instruments)
+# watchlist_instruments = banknifty_instruments.loc[banknifty_instruments.strike == 35000]
+# print(watchlist_instruments)
+
+watchlist = []
+tickertape = {}
+strikes = []
+
+for strike in range(banknifty_low, banknifty_high, 100):
+    if strike not in strikes:
+        strikes.append(strikes)
+
+        monthly_options = banknifty_instruments.loc[banknifty_instruments.strike == strike, [
+            'instrument_token', 'tradingsymbol']].head(2)
+        call_instrument_token, call_tradingsymbol = monthly_options.values[0]
+        put_instrument_token, put_tradingsymbol = monthly_options.values[1]
+        tickertape[call_instrument_token] = call_tradingsymbol
+        tickertape[put_instrument_token] = put_tradingsymbol
+        watchlist.append(call_instrument_token)
+        watchlist.append(put_instrument_token)
+
+print(tickertape)
