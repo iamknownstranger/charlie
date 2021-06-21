@@ -43,11 +43,11 @@ for row in stock_instruments.iterrows():
   
 # print(stocks, watchlist)
 
-print("21 Day High Breakout")
+print("210 Day Range - High Breakout")
 for instrument_token in watchlist:
     try:
         historical_data = pd.DataFrame(kite.historical_data(
-            instrument_token, today - timedelta(days=34), today, "day"))
+            instrument_token, today - timedelta(hours=21), today, "minute"))
         historical_data = historical_data.tail(-1).tail(21)
         
         todays_ohlc = kite.ohlc(instrument_token)[
@@ -72,8 +72,9 @@ for instrument_token in watchlist:
      
             if last_price >= highest_high:
                 
-                print('\n', instrument_token, stocks[instrument_token], today_range, last_price, highest_high)
-        else:
-                print("=", end='')
+                if today_range >= 2.1:
+                    print(instrument_token, stocks[instrument_token], today_range, last_price, highest_high)
+            # else:
+            #     print("21 Day Range Breakout")
     except:
         continue

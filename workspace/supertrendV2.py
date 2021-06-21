@@ -249,7 +249,7 @@ for strike in range(banknifty_low, banknifty_high, 100):
         tickertape[call_instrument_token] = call_tradingsymbol
         tickertape[put_instrument_token] = put_tradingsymbol
         watchlist.append(call_instrument_token)
-        watchlist.append(call_instrument_token)
+        watchlist.append(put_instrument_token)
 
 print(tickertape)
 
