@@ -68,6 +68,7 @@ quotes = [banknifty_spot, banknifty_close, banknifty_high, banknifty_low]
 nfo_instruments = pd.DataFrame(kite.instruments("NFO"))
 
 banknifty_instruments = nfo_instruments.loc[(nfo_instruments.name == 'BANKNIFTY')]
+
 # print(banknifty_instruments)
 # watchlist_instruments = banknifty_instruments.loc[banknifty_instruments.strike == 35000]
 # print(watchlist_instruments)

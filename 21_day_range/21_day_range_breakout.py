@@ -20,8 +20,6 @@ watchlist = [260105]
 # properties = {}
 
 today = datetime.today() 
-previous_trading_day = (datetime.today() - BDay(1)).strftime("%Y-%m-%d")
-
 
 today_data = ""
 historical_data = ""
